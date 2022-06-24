@@ -45,6 +45,10 @@ class Contributor(models.Model):
     def __str__(self):
         return self.initialled_name()
 
+    # Activity 12.01
+    def number_contributions(self):
+        return self.bookcontributor_set.count()
+
 
 
 class BookContributor(models.Model):
